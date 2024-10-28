@@ -20,7 +20,7 @@
         <input type="hidden" id="year" name="year">
 
         <div class="mb-3 col-md-3">
-            <label for="writeAt" class="form-label">เขียนที่</label>
+            <label for="writeAt" class="form-label">สถานที่</label>
             <input type="text" class="form-control" id="writeAt" name="writeAt" placeholder="โปรดระบุ" required>
         </div>
 
@@ -109,7 +109,7 @@
             </div>
         </div>
 
-        <br>
+        {{-- <br>
 
         <div class="mb-3 col-md-4">
             <label for="complaintName" class="form-label">ชื่อเรื่องคำขอ</label>
@@ -154,7 +154,7 @@
                     container.appendChild(fileInput);
                 }
             }
-        </script>
+        </script> --}}
 
         <br>
 

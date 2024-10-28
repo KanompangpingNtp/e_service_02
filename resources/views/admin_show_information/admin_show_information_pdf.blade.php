@@ -258,14 +258,14 @@
 
 
     <div class="container">
-        <h4>แบบคำขอร้องทั่วไป</h4><br>
+        <h4>แบบคําร้องขอใช้ถังขยะ</h4><br>
 
-        <p>หมายเลขคำร้องที่ ............. / .............</p>
+        <p>เลขที่..........................</p>
 
-        <p class="right">เขียนที่ <span class="location">{{ $form->location }}</span> </p>
-        <p style="margin-left: 320px;">วันที่<span class="day">{{ $form->day }}</span>เดือน<span class="month">{{ $thaiMonth  }}</span>ปี<span class="year">{{ $thaiYear  }}</span></p>
+        <p class="right">สถานที่ <span class="location">{{ $form->location }}</span> </p>
+        <p class="right">วันที่<span class="day">{{ $form->day }}</span>เดือน<span class="month">{{ $thaiMonth  }}</span>ปี<span class="year">{{ $thaiYear  }}</span></p>
 
-        <p><b>เรื่อง</b><span class="submission_name">{{ $form->submission_name }}</span></p>
+        {{-- <p><b>เรื่อง</b><span class="submission_name">{{ $form->submission_name }}</span></p> --}}
         <p><b>เรียน</b> นายกเทศมนตรีเมืองต้นแบบ ๔.๐ </p><br>
 
         <p style="margin-left: 55px;">ข้าพเจ้า <span class="fullname">{{ $form->fullname }}</span> อาย <span class="age">{{ $form->age }}</span>ปี อาชีพ<span class="occupation">{{ $form->occupation }}</span></p>
@@ -273,58 +273,43 @@
         <p>ถนน<span class="road">{{ $form->road }}</span>แขวง/ตำบล<span class="sub_district">{{ $form->sub_district }}</span>เขต/อำเภอ<span class="district">{{ $form->district }}</span></p>
         <p>จังหวัด<span class="province">{{ $form->province }}</span>หมายเลขโทรศัพท์<span class="phone">{{ $form->phone }}</span> </p>
 
-        <p style="margin-left: 55px;">ขอยื่นคำร้องต่อท่านนายกเทศบาลเมืองต้นแบบ ๔.๐ ดังนี้</p>
-        <p style="margin-left: 55px;"><span class="submission">{{ $form->submission }}</span></p>
-
-        <p>พร้อมยินยอมให้ท่านอาจารย์หลักฐานดังต่อไปนี้ จำนวน<span class="document_count">{{ $form->document_count }}</span>ฉบับ</p>
-        <p>ข้าพเจ้ายังยอมรับว่าจำเป็นต้อง จึงลงลายมือชื่อ/ลายเซ็นผู้ร้องเพิ่มเติมไว้เป็นหลักฐาน</p>
+        <p style="margin-left: 55px;">ซึ่งตั้งบ้านเรือนอยู่ในเขตปกครอง ของเทศบาลเมืองต้นแบบ ๔.๐ มีความประสงค์ขอรับถังขยะ จํานวน 10 ใบ</p>
+        <p>จากเทศบาลเมืองต้นแบบ ๔.๐ ตั้งแต่วันที่<span class="day">{{ $form->day }}</span>เดือน<span class="month">{{ $thaiMonth  }}</span>ปี<span class="year">{{ $thaiYear  }}</span> และยินยอมจ่ายค่าธรรมเนียมในการบริการเก็บ</p>
+        <p>ขยะมูลฝอยในอัตรา ๔๐ บาท/เดือน/ใบ ตามเทศบัญญัติเทศบาลเมืองต้นแบบ ๔.๐ เรื่อง การกําจัดขยะมูลฝอยสิ่งปฏิกูล</p>
+        <p>และสิ่งเปรอะเปื้อน พ.ศ. ๒๕๕๒ ทุกประการ</p>
 
         <table style="width: 100%; margin-top: 10px;">
             <tr>
                 <!-- คอลัมน์ซ้าย -->
                 <td style="width: 50%; vertical-align: top;">
-                    <div class="officer-note">
-                        <div class="officer-note-title">
-                            สำหรับเจ้าหน้าที่บันทึกเพิ่มเติม<br>
-                            (กรณีผู้ยื่นคำร้องไม่ยินยอมลงลายมือชื่อ)
-                        </div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <p style="text-align: center;">ลงชื่อ..............................................</p>
-                        <p style="text-align: center;">(..........................................) </p>
-                        <p style="text-align: center;">ตำแหน่ง...........................................</p>
-                    </div>
                 </td>
 
                 <!-- คอลัมน์ขวา -->
                 <td style="width: 50%; vertical-align: top; text-align: center;">
                     <p>ลงชื่อ<span class="fullname">{{ $form->fullname }}</span>ผู้ยื่นคำร้อง</p>
-                    <p>(<span class="fullname">{{ $form->fullname }}</span>)</p>
-
-                    <p>ลงชื่อ .....................................ผู้เขียน/บันทึก</p>
-                    <p>( ............................................................ )</p>
-                    <p>ความคิดเห็นปลัดเทศบาลเมืองต้นแบบ ๔.๐</p>
-                    <p>........................................................................</p>
-                    <p>........................................................................</p>
-                    <p>ลงชื่อ ................................................</p>
-                    <p>( ............................................................)</p>
-                    <p>ความคิดเห็นนายกเทศบาลเมืองต้นแบบ ๔.๐</p>
-                    <p>........................................................................</p>
-                    <p>........................................................................</p>
-                    <p>ลงชื่อ ................................................</p>
-                    <p>( ............................................................)</p>
+                    <p>(<span class="fullname">{{ $form->salutation }}{{ $form->fullname }}</span>)</p>
+                    <p>ลงชื่อ.......................พยาน</p>
+                    <p>(...............................)</p>
                 </td>
             </tr>
         </table>
 
+        <style>
+            .rectangle {
+                width: 500px; /* กำหนดความกว้าง */
+                height: 200px; /* กำหนดความสูง */
+                border: 1px solid black; /* เส้นขอบสีดำ */
+                margin: 0 auto;
+                margin-top: 50px;
+            }
+            .title {
+                text-align: center;
+                /* font-size: 18px; */
+            }
+        </style>
+
+        <div class="title">แผนที่โดยสังเขป</div>
+        <div class="rectangle"></div>
 
     </div>
 
